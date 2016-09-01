@@ -959,6 +959,8 @@ function xhrClient (request) {
             xhr.withCredentials = true;
         }
 
+        xhr.responseType = request.responseType;
+
         each(request.headers || {}, function (value, header) {
             xhr.setRequestHeader(header, value);
         });
